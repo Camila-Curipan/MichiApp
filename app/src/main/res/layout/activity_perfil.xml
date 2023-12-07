@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/miratelefono"
+    >
+
+    <LinearLayout
+        android:id="@+id/lnCarga"
+        android:layout_width="370dp"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/imageCarga"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/gatoicono" />
+
+        <TextView
+            android:id="@+id/textCargando"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:text="Espere un momento...."
+            android:gravity="center"
+            android:textSize="23sp"
+            android:textColor="@color/white"
+            android:background="@color/black"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnFormulario"
+        android:layout_width="350dp"
+        android:layout_height="370dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="visible">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="Administrar Productos"
+                android:textColor="@color/white"
+                android:textSize="23sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/imageTitle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/gatoicono" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edtIdProd"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:background="@color/black"
+                android:hint="Código"
+                android:minHeight="40dp"
+                android:padding="3dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+            <EditText
+                android:id="@+id/edtNom"
+                android:layout_width="195dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:background="@color/black"
+                android:hint="Nombre de producto"
+                android:padding="3dp"
+                android:minHeight="40dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"/>
+        </LinearLayout>
+        <Spinner
+            android:id="@+id/spSpinner"
+            android:layout_width="337dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="#80000000"
+            android:contentDescription="s"
+            android:minHeight="40dp"
+            app:layout_constraintHorizontal_bias="0.405"/>
+
+        <EditText
+            android:id="@+id/edtDes"
+            android:layout_width="337dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/black"
+            android:hint="Descripción"
+            android:padding="3dp"
+            android:minHeight="40dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edtCost"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:background="@color/black"
+                android:hint="Precio en CLP"
+                android:padding="3dp"
+                android:minHeight="40dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                app:layout_constraintHorizontal_bias="0.142"/>
+
+            <Button
+                android:onClick="enviarDatosFirestore"
+                android:layout_width="147dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:backgroundTint="@color/black"
+                android:text="Agregar"
+                app:layout_constraintHorizontal_bias="0.897" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/lstLista"
+        android:layout_width="413dp"
+        android:layout_height="366dp"
+        android:layout_marginTop="364dp"
+        android:background="#A9FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="visible"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

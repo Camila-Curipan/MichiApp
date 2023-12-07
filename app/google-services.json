@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "837434801794",
+    "project_id": "michi-94a5b",
+    "storage_bucket": "michi-94a5b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:837434801794:android:ef5398977c9ae5e27cfe9b",
+        "android_client_info": {
+          "package_name": "com.michi.michislifever2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmpsk3wdFLuq_wUG86k_uLvVTaKoilnpQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
